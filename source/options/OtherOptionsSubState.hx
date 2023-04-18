@@ -39,7 +39,7 @@ class OtherOptionsSubState extends BaseOptionsMenu
 			'scoreType',
 			'string',
 			'Psych Engine',
-			['Psych Engine', 'Score Only', Disabled']);
+			['Psych Engine', 'Score Only', 'Disabled']);
 		addOption(option);
 
 		super();
