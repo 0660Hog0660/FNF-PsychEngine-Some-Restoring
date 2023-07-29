@@ -2316,19 +2316,11 @@ class PlayState extends MusicBeatState
 		}
 	}
 
-	public function updateScore(miss:Bool = false)
-	{
-	if (ClientPrefs.scoreType == 'Psych Engine') {
-		scoreTxt.text = 'Score: ' + songScore
+	public function updateScore(miss:Bool = false) {		scoreTxt.text = 'Score: ' + songScore
 		+ ' | Misses: ' + songMisses
 		+ ' | Rating: ' + ratingName
 		+ (ratingName != '?' ? ' (${Highscore.floorDecimal(ratingPercent * 100, 2)}%) - $ratingFC' : '');
-    }
-    
-    if (ClientPrefs.scoreType == 'Score Only') {
-		scoreTxt.text = 'Score: ' + songScore;
-    }
-    
+		
 		if(ClientPrefs.scoreZoom && !miss && !cpuControlled)
 		{
 			if(scoreTxtTween != null) {
